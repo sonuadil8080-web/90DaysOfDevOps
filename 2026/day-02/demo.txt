@@ -1,0 +1,57 @@
+# Linux Commands Cheat Sheet (DevOps)
+
+## 🔧 Process Management
+
+- `ps aux` – List all running processes
+- `ps -ef` – Full-format process listing
+- `top` – Real-time CPU and memory usage
+- `htop` – Enhanced interactive process viewer
+- `uptime` – System load and running time
+- `kill <PID>` – Gracefully stop a process
+- `kill -9 <PID>` – Force kill a process
+- `pkill <process>` – Kill process by name
+- `nice -n <value> <cmd>` – Start process with priority
+- `renice <value> -p <PID>` – Change running process priority
+
+---
+
+## 📁 File System & Disk
+
+- `ls -lh` – List files with sizes
+- `df -h` – Disk usage by filesystem
+- `du -sh <dir>` – Disk usage of directory
+- `mount | column -t` – View mounted filesystems
+- `find /path -name file` – Search files
+- `chmod 755 file` – Change file permissions
+- `chown user:group file` – Change ownership
+- `stat file` – File metadata details
+
+---
+
+## 📜 Logs & systemd
+
+- `systemctl status <service>` – Check service status
+- `systemctl restart <service>` – Restart a service
+- `journalctl -u <service>` – View service logs
+- `journalctl -xe` – System errors and warnings
+- `tail -f /var/log/messages` – Live log monitoring
+
+---
+
+## 🌐 Networking & Troubleshooting
+
+- `ip addr` – View IP addresses
+- `ip route` – Check routing table
+- `ss -tulnp` – List listening ports and services
+- `ping <host>` – Network connectivity check
+- `curl -I <url>` – Test HTTP response headers
+- `dig <domain>` – DNS lookup
+
+---
+
+## 🧠 Quick Debug Tips
+
+- High CPU → `top`, `ps aux --sort=-%cpu`
+- Memory issue → `free -m`, `top`
+- Service down → `systemctl status`, `journalctl`
+- Network issue → `ss`, `ip addr`, `ping`
